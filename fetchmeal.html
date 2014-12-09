@@ -1,0 +1,34 @@
+<html>
+
+  <head>
+  </head>
+
+  <style>
+  </style>
+
+  <body>
+    <div id="something"></div>
+
+    <button id="getfoodbutton">Get Food</button>
+
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script>
+    function get_food(){
+    $.get(
+    "https://cookroulette.herokuapp.com/api", 
+    function (data) {
+        $("#something").text(data);
+    
+    }
+    );}
+
+   $("#getfoodbutton").click(function(event){
+    get_food();
+    })
+</script>
+
+  
+
+</html>
